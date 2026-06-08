@@ -32,7 +32,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 // ✨ VİTRİNİ HALKA AÇTIĞIMIZ SATIR ✨
                 // Hem /animals hem de /api/animals için gelen tüm okuma isteklerini serbest bıraktık
-                .requestMatchers(HttpMethod.GET, "/api/animals/**", "/animals/**").permitAll() 
+                .requestMatchers(HttpMethod.GET,"/api","/api/animals/**", "/animals/**").permitAll() 
                 
                 // Geri kalan HER ŞEY (İlan ekleme, silme vb.) Supabase Token'ı isteyecek
                 .anyRequest().authenticated()
