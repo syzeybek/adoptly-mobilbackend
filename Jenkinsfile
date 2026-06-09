@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // 🔪 AŞÇIYA MAVEN VERİLDİ (Eklediğimiz kısım burası)
+    tools {
+        maven 'Maven3'
+    }
+
     environment {
         REGISTRY = 'adoptly-registry'
         IMAGE_NAME = 'adoptly-backend'
